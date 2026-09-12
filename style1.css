@@ -1,0 +1,95 @@
+body{
+    color: #333;
+    background-color: #f4f4f4;
+}
+.card1{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(180deg, #685252 0%, #892525 100%);
+    color: #333;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.CityDisplay, .tempDisplay{
+    
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.HumidityDisplay{
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.descDisplay{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.WeatherEmoji{
+    font-size: 8rem;
+    margin:0;
+}
+.ErrorDisplay{
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.WeatherForm{
+    width: 90%;
+   
+    background: linear-gradient(180deg, #85e1e1 0%, #b3a1a1 100%);
+    color: #333;
+    margin: 60px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    padding: 10px 25px;
+    background:#ebfffc;
+    color: #555;
+    border: none;
+    border-radius: 30px;
+    height: 60px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 16px;
+}
+.search button{
+   border: none;
+   outline: none;
+   background: #ebfffc;
+   border-radius: 50%;
+   height: 60px;
+   width: 60px;
+   cursor: pointer;
+
+}
+.search button img{
+    width: 16px;
+}
+    

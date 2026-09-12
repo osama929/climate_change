@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+   color: #333;
+   background-color: #f4f4f4;
+
+}
+.navbar{
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.site-header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+}
+.nav-links{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+.nav-links a{
+    color: #00796b;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 24px;
+}
+.menu {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+}
+.hero-content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.hero button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero-actions a { 
+    background-color: #004d40;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn {
+    background-color: #00796b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.logo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.section {
+    margin-bottom: 40px;
+}
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+section .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+section .content > div {
+    flex: 1 1 300px;
+}
+section-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cards.three {
+    justify-content: space-between;
+}
+.cards.two {
+    justify-content: space-between;
+}
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+}
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+callout {
+    background-color: #00796b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+page-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+page-banner {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.primary{
+    background-color: #00796b;
+    color: #fff;
+}
+.secondary{
+    background-color: #004d40;
+    color: #fff;
+}
+
+@media(max-width:760px){
+    .menu{
+        display:block
+    }
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:white;
+        padding:10px 20px 18px;
+        box-shadow:0 8px 16px rgba(0,0,0,.08);
+        flex-direction:column
+    }
+    .nav-links.open{
+        display:flex
+    }
+    .nav-links a{
+        padding:12px
+    }
+    .hero{
+        min-height:540px
+    }
+    .cards.three,.cards.two{
+        grid-template-columns:1fr
+    }
+    .callout{
+        margin:10px 20px 55px;
+        padding:28px;
+        display:block
+    }
+    .callout .btn{
+        margin-top:20px
+    }
+    .section{
+        padding:60px 20px
+    }
+    .page-banner{
+        padding:65px 20px
+    }
+    .hero-content{
+        padding:65px 20px
+    }
+}
