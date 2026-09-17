@@ -1,6 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector(".menu");
   const nav = document.querySelector(".nav-links");
+  const themeToggle = document.querySelector(
+    "#nightModeToggle, #darkModeToggle, [data-theme-toggle], .theme-toggle, .night-mode-toggle"
+  );
+
+  if (themeToggle) {
+    const storageKey = "climate-change-theme";
+    let savedTheme = null;
+
+    try {
+      savedTheme = localStorage.getItem(storageKey);
+    } catch (error) {
+      console.warn("Unable to read the saved theme.", error);
+    }
+
+    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const applyTheme = isDark => {
+      document.documentElement.classList.toggle("dark-mode", isDark);
+      document.documentElement.classList.toggle("night-mode", isDark);
+      document.body.classList.toggle("dark-mode", isDark);
+      document.body.classList.toggle("night-mode", isDark);
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to night mode"
+      );
+    };
+
+    const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    applyTheme(isDark);
+
+    themeToggle.addEventListener("click", () => {
+      const nextIsDark = !document.documentElement.classList.contains("night-mode");
+      applyTheme(nextIsDark);
+      try {
+        localStorage.setItem(storageKey, nextIsDark ? "dark" : "light");
+      } catch (error) {
+        console.warn("Unable to save the selected theme.", error);
+      }
+    });
+  }
 
   if (menuButton && nav) {
     menuButton.addEventListener("click", () => {

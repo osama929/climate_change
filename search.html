@@ -6,6 +6,20 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style1.css">
      <link rel="stylesheet" href="style.css">
+     <style>
+    /* index.js toggles these classes; keep the page variables in sync. */
+    html.dark-mode,
+    html.night-mode,
+    body.dark-mode,
+    body.night-mode {
+      --text-color: #fff;
+      --breyebrow-color: #00796b;
+      --logo-color: #fff;
+      --background-color: #000;
+      --surface-color: #1f1f1f;
+      --hero-color: #12383c;
+    }
+  </style>
 
     
 </head>
@@ -31,6 +45,7 @@
         <a href="search.html">Check_Weather</a>
       </li>
     </ul>
+   <button id="darkModeToggle" class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to night mode">🌙</button>
      <button class="menu" aria-label="Toggle navigation">☰</button>
   </nav>
   

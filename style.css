@@ -1,10 +1,29 @@
+:root{
+    --text-color:#333;
+    --breyebrow-color:#00796b;
+    --logo-color:#fff;
+    --background-color:#f4f4f4;
+    --surface-color:#fff;
+    --hero-color:#e0f7fa;
+
+}
+.darkmode{
+     --text-color:#fff;
+    --breyebrow-color:#00796b;
+    --logo-color:#fff;
+    --background-color:black;
+    --surface-color:#1f1f1f;
+    --hero-color:#12383c;
+}
+
 body{
-   color: #333;
-   background-color: #f4f4f4;
+   color: var(--text-color);
+   background-color: var(--background-color);
+   transition: color 0.3s ease, background-color 0.3s ease;
 
 }
 .navbar{
-    background-color: #333;
+    background-color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +33,7 @@ body{
     position: sticky;
     top: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: var(--logo-color);
 
 }
 .nav-links{
@@ -23,7 +42,7 @@ body{
     list-style: none;
 }
 .nav-links a{
-    color: #00796b;
+    color: var(--breyebrow-color);
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -35,6 +54,20 @@ body{
     cursor: pointer;
     font-size: 24px;
 }
+.theme-toggle {
+    border: 1px solid var(--breyebrow-color);
+    border-radius: 999px;
+    padding: 8px 12px;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background-color: var(--breyebrow-color);
+    color: var(--logo-color);
+}
 main {
     padding: 20px;
     max-width: 1200px;
@@ -43,7 +76,7 @@ main {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: #e0f7fa;
+    background-color: var(--hero-color);
     border-radius: 10px;
 }
 .hero-content{
@@ -61,8 +94,8 @@ main {
 .hero button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #00796b;
-    color: #fff;
+    background-color: var(--breyebrow-color);
+    color: var(--logo-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -78,8 +111,8 @@ main {
     gap: 10px;
 }
 .btn {
-    background-color: #00796b;
-    color: #fff;
+    background-color: var(--breyebrow-color);
+    color: var(--logo-color);
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -89,7 +122,7 @@ main {
     font-size: 1.5em;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #fff;
+    color: var(--logo-color);
 }
 .section {
     margin-bottom: 40px;
@@ -122,7 +155,7 @@ section-heading {
 .eyebrow {
     text-transform: uppercase;
     font-size: 0.9em;
-    color: #00796b;
+    color: var(--breyebrow-color);
     margin-bottom: 5px;
 }
 .cards {
@@ -137,7 +170,7 @@ section-heading {
     justify-content: space-between;
 }
 .card {
-    background-color: #fff;
+    background-color: var(--surface-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -156,31 +189,31 @@ section-heading {
     margin-bottom: 10px;
 }
 callout {
-    background-color: #00796b;
-    color: #fff;
+    background-color: var(--breyebrow-color);
+    color: var(--logo-color);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
 page-footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-color);
+    color: var(--logo-color);
     text-align: center;
     padding: 20px;
 }
 page-banner {
     background-color: #004d40;
-    color: #fff;
+    color: var(--logo-color);
     text-align: center;
     padding: 20px;
 }
 .primary{
-    background-color: #00796b;
-    color: #fff;
+    background-color: var(--breyebrow-color);
+    color: var(--logo-color);
 }
 .secondary{
     background-color: #004d40;
-    color: #fff;
+    color: var(--logo-color);
 }
 @media(max-width:760px){
     .menu-toggle{
@@ -192,7 +225,7 @@ page-banner {
         top:72px;
         left:0;
         right:0;
-        background:white;
+        background:var(--background-color);
         padding:10px 20px 18px;
         box-shadow:0 8px 16px rgba(0,0,0,.08);
         flex-direction:column
